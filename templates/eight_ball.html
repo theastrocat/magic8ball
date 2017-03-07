@@ -1,0 +1,41 @@
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+
+  <title>Magic Eight Ball</title>
+  <meta name="description" content="Magic Eight Ball">
+  <meta name="author" content="Galvanize DSI">
+
+  <script type="text/javascript" src="{{ url_for('static', filename='jquery.js') }}">
+  </script>
+  <script type="text/javascript" src="{{ url_for('static', filename='app.js') }}">
+  </script>
+</head>
+
+<body>
+
+    <h1>Magic Eight Ball</h1>
+    <p>This app will help you solve life issues...</p>
+    <p>Please enter your name and a question below:</p>
+
+    <div>
+        <!-- These have id's so that later we can pull out data using js. -->
+        <span>Name:</span> <input id="name"></input>
+    </div>
+    <div>
+        <span>Question:</span>
+    </div>
+    <div>
+        <textarea id="question",
+                rows="12", cols="60"></textarea>
+    </div>
+
+    <div>
+        <button type="button" id="solve">Guide Me!</button>
+    </div>
+
+    <div>
+        <p> The solution is: <span id="solution"></span> </p>
+
+</body>
+</html>
